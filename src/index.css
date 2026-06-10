@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 70% 15%;
+    --foreground: 0 0% 100%;
+    --card: 270 70% 18%;
+    --card-foreground: 0 0% 100%;
+    --popover: 270 70% 18%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 270 70% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 50% 25%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 270 30% 30%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 45 100% 50% / 0.3;
+    --input: 0 0% 100% / 0.15;
+    --ring: 45 100% 50%;
+    --radius: 0.5rem;
+    
+    --color-primary: #6A1B9A;
+    --color-primary-dark: #4A148C;
+    --color-primary-light: #9C27B0;
+    --color-gold: #FFD700;
+    --color-gold-dark: #FFA000;
+    --color-bg-dark: #2D0A4E;
+    --color-success: #4CAF50;
+    --color-danger: #F44336;
+    --color-warning: #FFC107;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#2D0A4E] text-white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+/* News ticker animation */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 40s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2D0A4E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6A1B9A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9C27B0;
+}

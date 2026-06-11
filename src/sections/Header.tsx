@@ -35,10 +35,16 @@ export default function Header() {
           />
         </div>
 
-        {/* Login/Register UI removed to simplify header for deployment
-            kept an empty spacer to preserve layout */}
-        <div className="flex items-center gap-2" aria-hidden>
-          <div style={{ width: 220 }} />
+        {/* Removed login form; add call-to-action button linking to external image/page */}
+        <div className="flex items-center gap-2">
+          <a
+            href="https://i.top4top.io/p_38136m4e11.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded"
+          >
+            DAFTAR GRATIS
+          </a>
         </div>
       </div>
     </header>
